@@ -2,7 +2,7 @@ import React from 'react'
 import './App.scss'
 import MainView from './component/main-view/MainView'
 
-function App() {
+const App = () => {
   return <MainView />
 }
 
