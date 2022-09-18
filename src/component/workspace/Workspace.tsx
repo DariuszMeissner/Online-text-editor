@@ -4,7 +4,7 @@ import './Workspace.scss'
 const Workspace: FC = () => {
   return (
     <div className="content">
-      <div className="workspace" contentEditable="true" />
+      <div id="workspace" className="workspace" contentEditable="true" />
     </div>
   )
 }
