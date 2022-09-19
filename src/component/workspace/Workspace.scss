@@ -1,6 +1,6 @@
 .content {
-  // padding: 50px 0;
-  // background-color: rgb(245 245 245);
+  padding: 50px 0;
+  background-color: rgb(245 245 245);
 
   .workspace {
     margin: 0 auto;
@@ -18,10 +18,15 @@
     display: none;
   }
 
-  .content .workspace {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+  .content {
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+
+    .workspace {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
   }
 
   @page {
