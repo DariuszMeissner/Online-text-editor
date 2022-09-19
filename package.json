@@ -6,6 +6,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-pdf/renderer": "^3.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -14,6 +15,7 @@
     "@types/react": "^18.0.19",
     "@types/react-dom": "^18.0.6",
     "bootstrap": "^5.2.1",
+    "buffer": "^6.0.3",
     "eslint": "^8.23.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
@@ -21,8 +23,8 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
+    "file-saver": "^2.0.5",
     "font-awesome": "^4.7.0",
-    "jspdf": "^2.5.1",
     "jsx-control-statements": "^3.2.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -64,8 +66,10 @@
     ]
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.5",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.1"
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1"
   }
 }
