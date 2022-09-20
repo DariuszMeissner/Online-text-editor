@@ -9,9 +9,21 @@ const AlignText: FC = () => {
 
   return (
     <>
-      <Button onClick={() => align('justifyLeft')} classValue="btn-light" icon="L" />
-      <Button onClick={() => align('justifyRight')} classValue="btn-light" icon="R" />
-      <Button onClick={() => align('justifyCenter')} classValue="btn-light" icon="C" />
+      <Button
+        onClick={() => align('justifyLeft')}
+        classValue="btn-light"
+        icon="L"
+      />
+      <Button
+        onClick={() => align('justifyRight')}
+        classValue="btn-light"
+        icon="R"
+      />
+      <Button
+        onClick={() => align('justifyCenter')}
+        classValue="btn-light"
+        icon="C"
+      />
     </>
   )
 }
