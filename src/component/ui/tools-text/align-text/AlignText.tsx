@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import Button from '../button/Button'
-import formatText from '../format-text/formatText'
+import Button from '../../button/Button'
+import formatText from '../../format-text/formatText'
 
 const AlignText: FC = () => {
   const align = (value: string): void => {
