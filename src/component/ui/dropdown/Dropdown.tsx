@@ -16,7 +16,9 @@ const Dropdown: FC<IProps> = ({ value, options, onChangeSize }) => {
     <label htmlFor={value}>
       <select id={value} value={value} onChange={onChangeSize}>
         {options.map(option => (
-          <option value={option.value}>{option.label}</option>
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
         ))}
       </select>
     </label>
