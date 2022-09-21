@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import AlignText from '../../ui/tools-text/align-text/AlignText'
 import BoldText from '../../ui/tools-text/bold-text/BoldText'
+import OpenFile from '../../ui/tools-text/open-file/OpenFile'
 import PrintToPdf from '../../ui/tools-text/print-to-pdf/PrintToPdf'
 import SizeText from '../../ui/tools-text/size-text/SizeText'
 import './ToolsBarTop.scss'
@@ -11,6 +12,7 @@ const ToolsBarTop: FC = () => {
       <BoldText />
       <AlignText />
       <PrintToPdf />
+      <OpenFile />
       <SizeText />
     </div>
   )
