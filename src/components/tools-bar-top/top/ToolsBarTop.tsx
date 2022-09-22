@@ -4,11 +4,17 @@ import BoldText from '../../ui/tools-text/bold-text/BoldText'
 import OpenFile from '../../ui/tools-text/open-file/OpenFile'
 import PrintToPdf from '../../ui/tools-text/print-to-pdf/PrintToPdf'
 import SizeText from '../../ui/tools-text/size-text/SizeText'
-import './ToolsBarTop.scss'
+
+const style = {
+  position: 'sticky',
+  top: 0,
+  backgroundColor: 'white',
+  borderBottom: '1px solid lightgray'
+} as const
 
 const ToolsBarTop: FC = () => {
   return (
-    <div className="tools-bar-top">
+    <div style={style}>
       <BoldText />
       <AlignText />
       <PrintToPdf />
