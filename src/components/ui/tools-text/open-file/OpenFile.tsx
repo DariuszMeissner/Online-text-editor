@@ -14,11 +14,8 @@ const OpenFile: FC = () => {
     updateData(readedFile.status)
   }, [readedFile.status])
 
-  const openFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const status: string[] = []
-    const fileReader: FileReader = new FileReader()
-
-    const onfileLoad = (event: ProgressEvent<FileReader>) => {
+  function setFileLoad(status: string[]) {
+    return (event: ProgressEvent<FileReader>) => {
       const fileObj = event.target?.result
 
       if (typeof fileObj === 'string') {
@@ -30,6 +27,12 @@ const OpenFile: FC = () => {
         status: status.join('\n')
       }))
     }
+  }
+
+  function openFile(e: React.ChangeEvent<HTMLInputElement>) {
+    const status: string[] = []
+    const fileReader: FileReader = new FileReader()
+    const onfileLoad = setFileLoad(status)
 
     fileReader.onload = onfileLoad
 
