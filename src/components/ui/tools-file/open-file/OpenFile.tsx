@@ -8,13 +8,14 @@ interface IReadedFile {
 const OpenFile: FC = () => {
   const [readedFile, setReadedFile] = useState<IReadedFile>({ status: '' })
 
+  // eslint-disable-next-line
   const { data, updateData } = useContext(OpenDocumentContext)
 
   useEffect(() => {
     updateData(readedFile.status)
   }, [readedFile.status])
 
-  function setFileLoad(status: string[]) {
+  const setFileLoad = (status: string[]) => {
     return (event: ProgressEvent<FileReader>) => {
       const fileObj = event.target?.result
 
@@ -29,7 +30,7 @@ const OpenFile: FC = () => {
     }
   }
 
-  function openFile(e: React.ChangeEvent<HTMLInputElement>) {
+  const openFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const status: string[] = []
     const fileReader: FileReader = new FileReader()
     const onfileLoad = setFileLoad(status)

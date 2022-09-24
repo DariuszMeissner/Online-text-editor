@@ -1,9 +1,11 @@
 import React, { FC } from 'react'
-import AlignText from '../../ui/tools-text/align-text/AlignText'
-import BoldText from '../../ui/tools-text/bold-text/BoldText'
-import OpenFile from '../../ui/tools-text/open-file/OpenFile'
-import PrintToPdf from '../../ui/tools-text/print-to-pdf/PrintToPdf'
-import SizeText from '../../ui/tools-text/size-text/SizeText'
+import AlignText from '../../ui/tools-text/paragraph/align-text/AlignText'
+import BoldText from '../../ui/tools-text/font/bold-text/BoldText'
+import ItalicText from '../../ui/tools-text/font/italic-text/ItalicText'
+import OpenFile from '../../ui/tools-file/open-file/OpenFile'
+import PrintToPdf from '../../ui/tools-file/print-to-pdf/PrintToPdf'
+import SizeText from '../../ui/tools-text/font/size-text/SizeText'
+import SaveFile from '../../ui/tools-file/save-file/SaveFile'
 
 const style = {
   position: 'sticky',
@@ -14,11 +16,13 @@ const style = {
 
 const ToolsBarTop: FC = () => {
   return (
-    <div style={style}>
-      <BoldText />
-      <AlignText />
+    <div className="tools-bar-top" style={style}>
+      <SaveFile />
       <PrintToPdf />
       <OpenFile />
+      <BoldText />
+      <ItalicText />
+      <AlignText />
       <SizeText />
     </div>
   )

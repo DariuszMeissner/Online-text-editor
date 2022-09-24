@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect } from 'react'
 import './SizeText.scss'
-import Dropdown from '../../dropdown/Dropdown'
-import formatText from '../../format-text/formatText'
+import Dropdown from '../../../dropdown/Dropdown'
+import formatText from '../../../format-text/formatText'
 
 const SizeText: FC = () => {
   const options = [
