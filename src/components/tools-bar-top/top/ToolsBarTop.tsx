@@ -6,6 +6,9 @@ import OpenFile from '../../ui/tools-file/open-file/OpenFile'
 import PrintToPdf from '../../ui/tools-file/print-to-pdf/PrintToPdf'
 import SizeText from '../../ui/tools-text/font/size-text/SizeText'
 import SaveFile from '../../ui/tools-file/save-file/SaveFile'
+import ToolsFileContainer from '../../ui/tools-file/tools-file-container/ToolsFileContainer'
+import ToolsFontContainer from '../../ui/tools-text/font/tools-font-container/ToolsFontContainer'
+import ToolsParagrapgContainer from '../../ui/tools-text/paragraph/tools-paragraph-container/ToolsParagrapgContainer'
 
 const style = {
   position: 'sticky',
@@ -17,13 +20,9 @@ const style = {
 const ToolsBarTop: FC = () => {
   return (
     <div className="tools-bar-top" style={style}>
-      <SaveFile />
-      <PrintToPdf />
-      <OpenFile />
-      <BoldText />
-      <ItalicText />
-      <AlignText />
-      <SizeText />
+      <ToolsFileContainer />
+      <ToolsFontContainer />
+      <ToolsParagrapgContainer />
     </div>
   )
 }
