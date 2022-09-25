@@ -69,6 +69,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "file-saver": "^2.0.5",
     "husky": "^8.0.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "react-icons": "^4.4.0"
   }
 }
