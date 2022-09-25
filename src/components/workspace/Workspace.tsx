@@ -20,7 +20,7 @@ const Workspace: FC = () => {
       <div
         id="workspace"
         className="workspace"
-        style={styleDocumentSize}
+        style={{ ...style.documentSize, ...style.documentMargin }}
         contentEditable="true"
         suppressContentEditableWarning
         tabIndex={0}
@@ -31,11 +31,16 @@ const Workspace: FC = () => {
   )
 }
 
-const styleDocumentSize = {
-  width: '210mm',
-  height: '297mm',
-  maxHeight: '297mm',
-  overflowY: 'hidden' // block new line on end of the page
+const style = {
+  documentSize: {
+    width: '210mm',
+    height: '297mm',
+    maxHeight: '297mm',
+    overflowY: 'hidden' // block new line on end of the page
+  },
+  documentMargin: {
+    padding: '20mm'
+  }
 } as const
 
 export default Workspace
