@@ -12,10 +12,14 @@ const style = {
 
 const ToolsBarTop: FC = () => {
   return (
-    <div className="tools-bar-top" style={style}>
-      <ToolsFileContainer />
-      <ToolsFontContainer />
-      <ToolsParagrapgContainer />
+    <div className="tools-bar-top pb-2" style={style}>
+      <div>
+        <ToolsFileContainer />
+      </div>
+      <div className="d-flex justify-content-center">
+        <ToolsFontContainer />
+        <ToolsParagrapgContainer />
+      </div>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { GiSave } from 'react-icons/gi'
 import Button from '../../button/Button'
 
 const SaveFile: FC = () => {
@@ -24,7 +25,14 @@ const SaveFile: FC = () => {
     }
   }
 
-  return <Button onClick={onClick} classValue="btn-light" icon="Save" />
+  return (
+    <Button
+      onClick={onClick}
+      classValue="btn btn-light"
+      title="Save file to txt"
+      icon={GiSave}
+    />
+  )
 }
 
 export default SaveFile

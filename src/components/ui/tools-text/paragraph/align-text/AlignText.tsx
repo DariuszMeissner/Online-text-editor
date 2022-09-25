@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { FaAlignRight, FaAlignLeft, FaAlignCenter } from 'react-icons/fa'
 import Button from '../../../button/Button'
 import formatText from '../../../format-text/formatText'
 
@@ -11,18 +12,18 @@ const AlignText: FC = () => {
     <>
       <Button
         onClick={() => align('justifyLeft')}
-        classValue="btn-light"
-        icon="L"
+        classValue="btn btn-light"
+        icon={FaAlignLeft}
       />
       <Button
         onClick={() => align('justifyRight')}
-        classValue="btn-light"
-        icon="R"
+        classValue="btn btn-light"
+        icon={FaAlignRight}
       />
       <Button
         onClick={() => align('justifyCenter')}
-        classValue="btn-light"
-        icon="C"
+        classValue="btn btn-light"
+        icon={FaAlignCenter}
       />
     </>
   )

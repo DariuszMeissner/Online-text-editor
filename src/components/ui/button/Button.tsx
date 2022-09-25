@@ -1,16 +1,24 @@
+/* eslint-disable react/require-default-props */
 import React, { FC } from 'react'
+import { IconType } from 'react-icons/lib'
 
 interface IProps {
-  icon: string
-  onClick: () => void
-  // eslint-disable-next-line react/require-default-props
+  icon: IconType
+  onClick?: () => void
   classValue?: string
+  title?: string
 }
 
-const Button: FC<IProps> = ({ icon, onClick, classValue }) => {
+const Button: FC<IProps> = ({ icon, title, onClick, classValue }) => {
+  const Icon = icon
   return (
-    <button className={`btn ${classValue}`} type="button" onClick={onClick}>
-      {icon}
+    <button
+      className={`btn-sm ${classValue}`}
+      type="button"
+      title={title}
+      onClick={onClick}
+    >
+      <Icon />
     </button>
   )
 }
