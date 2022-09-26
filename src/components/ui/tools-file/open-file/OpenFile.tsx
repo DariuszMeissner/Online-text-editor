@@ -1,4 +1,4 @@
-import React, { FC, useState, useContext, useEffect } from 'react'
+import React, { FC, useState, useContext, useEffect, useRef } from 'react'
 import { FaRegFolderOpen } from 'react-icons/fa'
 import { OpenDocumentContext } from '../../../../contexts/document'
 import Button from '../../button/Button'
@@ -17,6 +17,7 @@ const OpenFile: FC = () => {
   const [readedFile, setReadedFile] = useState<IReadedFile>({ status: '' })
   // eslint-disable-next-line
   const { data, updateData } = useContext(OpenDocumentContext)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     updateData(readedFile.status)
@@ -49,22 +50,30 @@ const OpenFile: FC = () => {
     }
   }
 
+  const handleClick = () => {
+    if (inputRef.current) {
+      inputRef.current.click()
+    }
+  }
+
   return (
-    <label htmlFor="input-file-open">
-      <Button
-        title="Open file from txt"
-        classValue="btn btn-light"
-        icon={FaRegFolderOpen}
-      />
+    <>
       <input
-        id="input-file-open"
+        // eslint-disable-next-line react/no-string-refs
+        ref={inputRef}
         style={style.inputFileOpenHide}
         type="file"
         multiple={false}
         accept=".txt"
         onChange={openFile}
       />
-    </label>
+      <Button
+        title="Open file from txt"
+        classValue="btn btn-light"
+        icon={FaRegFolderOpen}
+        onClick={handleClick}
+      />
+    </>
   )
 }
 
