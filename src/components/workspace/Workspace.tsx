@@ -1,17 +1,19 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { FC, useContext } from 'react'
+import React, { FC, useContext, useRef } from 'react'
 import { OpenDocumentContext } from '../../contexts/document'
 import './Workspace.scss'
 
 const Workspace: FC = () => {
   // eslint-disable-next-line
   const { data, updateData } = useContext(OpenDocumentContext)
+  const ref = useRef<HTMLDivElement>(null)
 
   const insertOpenedFile = () => {
-    const getSection = document.getElementById('workspace')
+    const getSection = ref.current
     const insertHTML = getSection && (getSection.innerHTML = data)
+
     return insertHTML
   }
 
@@ -19,13 +21,17 @@ const Workspace: FC = () => {
     <div className="content">
       <div
         id="workspace"
-        className="workspace"
-        style={{ ...style.documentSize, ...style.documentMargin }}
+        ref={ref}
         contentEditable="true"
         suppressContentEditableWarning
         tabIndex={0}
       >
-        <div>{insertOpenedFile()}</div>
+        <main
+          className="workspace"
+          style={{ ...style.documentSize, ...style.documentMargin }}
+        >
+          <div>{insertOpenedFile()}</div>
+        </main>
       </div>
     </div>
   )
