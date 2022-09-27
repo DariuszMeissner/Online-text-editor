@@ -19,17 +19,14 @@ const Workspace: FC = () => {
 
   return (
     <div className="content">
-      <div
-        id="workspace"
-        ref={ref}
-        contentEditable="true"
-        suppressContentEditableWarning
-        tabIndex={0}
-      >
+      <div id="workspace">
         <main
           className="workspace"
-          style={{ ...style.documentSize, ...style.documentMargin }}
-        >
+          ref={ref}
+          contentEditable="true"
+          suppressContentEditableWarning
+          tabIndex={0}
+          style={{ ...style.documentSize, ...style.documentMargin }}>
           <div>{insertOpenedFile()}</div>
         </main>
       </div>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
 import React, { FC } from 'react'
 
 interface IProps {
@@ -14,8 +15,8 @@ interface IOptions {
 const Dropdown: FC<IProps> = ({ value, options, onChangeSize }) => {
   return (
     <label htmlFor={value}>
-      <select id={value} value={value} onChange={onChangeSize}>
-        {options.map(option => (
+      <select id={value} value={value} onChange={onChangeSize} style={style}>
+        {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
           </option>
@@ -23,6 +24,10 @@ const Dropdown: FC<IProps> = ({ value, options, onChangeSize }) => {
       </select>
     </label>
   )
+}
+
+const style = {
+  height: '100%'
 }
 
 export default Dropdown

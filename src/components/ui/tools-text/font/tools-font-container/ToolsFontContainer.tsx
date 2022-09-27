@@ -7,16 +7,12 @@ import UnderlineText from '../underline-text/UnderlineText'
 
 const ToolsFontContainer: FC = () => {
   return (
-    <div>
-      <div>
-        <FontName />
-        <SizeText />
-      </div>
-      <div>
-        <BoldText />
-        <ItalicText />
-        <UnderlineText />
-      </div>
+    <div className="d-flex align-content-center">
+      <BoldText />
+      <ItalicText />
+      <UnderlineText />
+      <FontName />
+      <SizeText />
     </div>
   )
 }

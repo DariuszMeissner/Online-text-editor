@@ -35,7 +35,6 @@
   "rules": {
     "semi": [2, "never"],
     "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
-    "react/jsx-closing-bracket-location": [1, "after-props"],
     "prettier/prettier": [
       "error",
       {
