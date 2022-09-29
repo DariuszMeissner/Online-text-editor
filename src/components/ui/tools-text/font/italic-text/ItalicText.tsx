@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { FaItalic } from 'react-icons/fa'
 import Button from '../../../button/Button'
-import formatText from '../../../format-text/formatText'
+import formatText from '../../../../../function/format-text/formatText'
 
 const ItalicText: FC = () => {
   const toItalic = () => {

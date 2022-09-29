@@ -31,7 +31,7 @@ const OpenFile: FC = () => {
         status.push(fileObj)
       }
 
-      setReadedFile(prevState => ({
+      setReadedFile((prevState) => ({
         ...prevState,
         status: status.join('\n')
       }))

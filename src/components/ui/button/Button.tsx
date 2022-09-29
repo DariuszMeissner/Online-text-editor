@@ -16,8 +16,7 @@ const Button: FC<IProps> = ({ icon, title, onClick, classValue }) => {
       className={`btn-sm ${classValue}`}
       type="button"
       title={title}
-      onClick={onClick}
-    >
+      onClick={onClick}>
       <Icon />
     </button>
   )

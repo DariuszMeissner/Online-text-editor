@@ -1,12 +1,13 @@
 import React, { FC, useEffect, useState } from 'react'
 import Dropdown from '../../../dropdown/Dropdown'
-import formatText from '../../../format-text/formatText'
+import formatText from '../../../../../function/format-text/formatText'
 
 const FontName: FC = () => {
   const options = [
     { label: 'Arial', value: 'Arial' },
     { label: 'Calibri', value: 'Calibri' },
-    { label: 'Comic Sans MS', value: 'Comic Sans MS' }
+    { label: 'Comic Sans MS', value: 'Comic Sans MS' },
+    { label: 'Times New Roman', value: 'Times New Roman' }
   ]
 
   const [value, setValue] = useState<string>('Arial')

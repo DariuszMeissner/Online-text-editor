@@ -7,7 +7,8 @@ const style = {
   position: 'sticky',
   top: 0,
   backgroundColor: 'white',
-  borderBottom: '1px solid lightgray'
+  borderBottom: '1px solid lightgray',
+  zIndex: '10'
 } as const
 
 const ToolsBarTop: FC = () => {

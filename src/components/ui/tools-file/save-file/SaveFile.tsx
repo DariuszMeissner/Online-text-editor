@@ -7,8 +7,6 @@ const SaveFile: FC = () => {
     const getDocument = document.querySelector('#workspace main')
     const linkToDownload = document.createElement('a')
 
-    console.log(getDocument)
-
     const serializeDocument =
       getDocument !== null && new XMLSerializer().serializeToString(getDocument)
 
