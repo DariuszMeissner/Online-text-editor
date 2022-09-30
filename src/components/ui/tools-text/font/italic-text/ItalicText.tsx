@@ -9,7 +9,12 @@ const ItalicText: FC = () => {
   }
 
   return (
-    <Button onClick={toItalic} classValue="btn btn-light" icon={FaItalic} />
+    <Button
+      onClick={toItalic}
+      classValue="btn btn-light"
+      icon={FaItalic}
+      title="italic text"
+    />
   )
 }
 

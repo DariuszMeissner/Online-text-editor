@@ -13,6 +13,7 @@ const UnderlineText: FC = () => {
       onClick={toUnderline}
       classValue="btn btn-light"
       icon={FaUnderline}
+      title="underline text"
     />
   )
 }

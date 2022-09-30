@@ -14,16 +14,19 @@ const AlignText: FC = () => {
         onClick={() => align('justifyLeft')}
         classValue="btn btn-light"
         icon={FaAlignLeft}
+        title="align text to left"
       />
       <Button
         onClick={() => align('justifyCenter')}
         classValue="btn btn-light"
         icon={FaAlignCenter}
+        title="align text to center"
       />
       <Button
         onClick={() => align('justifyRight')}
         classValue="btn btn-light"
         icon={FaAlignRight}
+        title="align text to right"
       />
     </>
   )

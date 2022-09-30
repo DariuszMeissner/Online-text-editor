@@ -8,7 +8,14 @@ const BoldText: FC = () => {
     formatText('bold', false)
   }
 
-  return <Button onClick={toBold} classValue="btn btn-light" icon={FaBold} />
+  return (
+    <Button
+      onClick={toBold}
+      classValue="btn btn-light"
+      icon={FaBold}
+      title="bold text"
+    />
+  )
 }
 
 export default BoldText
