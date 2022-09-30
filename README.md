@@ -2,6 +2,10 @@
 
 I'm building my own online text editor based on React and Typescript.
 
+#### To see demo please click in link below
+
+https://dariuszmeissner.github.io/Online-text-editor/
+
 #### Ready functions:
 
 text:
