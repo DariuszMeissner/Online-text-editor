@@ -10,12 +10,14 @@ https://dariuszmeissner.github.io/Online-text-editor/
 
 text:
 
-- bolding,
+- bold,
 - underline,
 - italic,
 - align(center,left,right),
 - font-size,
 - font-name
+- uppercase
+- regular
 
 file:
 
