@@ -18,6 +18,7 @@ text:
 - font-name
 - uppercase
 - regular
+- color
 
 file:
 
