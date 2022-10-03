@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import BoldText from '../bold-text/BoldText'
+import ColorText from '../color-text/ColorText'
 import FontName from '../font-name/FontName'
 import ItalicText from '../italic-text/ItalicText'
 import RegularText from '../regular-text/RegularText'
@@ -15,6 +16,7 @@ const ToolsFontContainer: FC = () => {
       <UnderlineText />
       <FontName />
       <SizeText />
+      <ColorText />
       <UppercaseText />
       <RegularText />
     </div>
