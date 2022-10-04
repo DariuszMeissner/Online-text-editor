@@ -2,6 +2,7 @@
 import React, { FC, useState, useEffect } from 'react'
 import { ImTextColor } from 'react-icons/im'
 import formatText from '../../../../../function/format-text/formatText'
+import useOutClick from '../../../../../hooks/useOutClick'
 import Button from '../../../button/Button'
 import MenuDropdown from '../../../menu-dropdown/MenuDropdown'
 
@@ -36,17 +37,25 @@ const ColorText: FC = () => {
     setActive((prevState) => !prevState)
   }
 
+  const handleClickOut = () => {
+    setActive(false)
+  }
+
+  const ref = useOutClick(handleClickOut)
+
   return (
     <div>
-      <Button
-        onClick={handleClick}
-        classValue="btn btn-light"
-        icon={ImTextColor}
-        title="color text"
-      />
+      <div ref={ref}>
+        <Button
+          onClick={handleClick}
+          classValue="btn btn-light"
+          icon={ImTextColor}
+          title="color text"
+        />
+      </div>
       <div style={{ backgroundColor: `#${value}`, ...style.barColor }} />
       {active && (
-        <div className="position-relative">
+        <div className="position-relative" ref={ref}>
           <MenuDropdown
             options={options}
             onChangeColor={handleChange}
