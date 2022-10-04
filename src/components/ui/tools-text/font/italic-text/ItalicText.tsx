@@ -11,7 +11,7 @@ const ItalicText: FC = () => {
   return (
     <Button
       onClick={toItalic}
-      classValue="btn btn-light"
+      classValue="btn btn-sm btn-light"
       icon={FaItalic}
       title="italic text"
     />

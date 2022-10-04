@@ -11,7 +11,7 @@ const BoldText: FC = () => {
   return (
     <Button
       onClick={toBold}
-      classValue="btn btn-light"
+      classValue="btn btn-sm btn-light"
       icon={FaBold}
       title="bold text"
     />

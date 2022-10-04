@@ -13,7 +13,7 @@ const UppercaseText: FC = () => {
   return (
     <Button
       onClick={toUppercase}
-      classValue="btn btn-light"
+      classValue="btn btn-sm btn-light"
       icon={TbLetterCaseUpper}
       title="uppercase text"
     />

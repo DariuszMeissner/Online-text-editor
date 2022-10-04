@@ -11,7 +11,7 @@ const UnderlineText: FC = () => {
   return (
     <Button
       onClick={toUnderline}
-      classValue="btn btn-light"
+      classValue="btn btn-sm btn-light"
       icon={FaUnderline}
       title="underline text"
     />

@@ -13,7 +13,7 @@ const RegularText: FC = () => {
   return (
     <Button
       onClick={toRegular}
-      classValue="btn btn-light"
+      classValue="btn btn-sm btn-light"
       icon={TbLetterCase}
       title="regular text"
     />

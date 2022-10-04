@@ -40,7 +40,7 @@ const ColorText: FC = () => {
       <div ref={ref}>
         <Button
           onClick={handleClick}
-          classValue="btn btn-light"
+          classValue="btn btn-sm btn-light"
           icon={ImTextColor}
           title="color text"
         />
