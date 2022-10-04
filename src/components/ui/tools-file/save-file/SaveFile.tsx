@@ -4,7 +4,7 @@ import Button from '../../button/Button'
 
 const SaveFile: FC = () => {
   const onClick = () => {
-    const getDocument = document.querySelector('#workspace main')
+    const getDocument = document.querySelector('.workspace')
     const linkToDownload = document.createElement('a')
 
     const serializeDocument =

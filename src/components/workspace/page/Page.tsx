@@ -26,7 +26,7 @@ const Page: FC<IProps> = ({ forwardedRef }) => {
       suppressContentEditableWarning
       tabIndex={0}
       style={style.documentSize}>
-      <div>{insertOpenedFile()}</div>
+      <div ref={ref}>{insertOpenedFile()}</div>
     </main>
   )
 }
