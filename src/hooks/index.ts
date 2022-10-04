@@ -1,6 +1,7 @@
+/* eslint-disable import/prefer-default-export */
 import { useEffect, useRef } from 'react'
 
-const useOutClick = (callback: () => void) => {
+export function useOutClick(callback: () => void) {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -25,5 +26,3 @@ const useOutClick = (callback: () => void) => {
 
   return ref
 }
-
-export default useOutClick

@@ -28,7 +28,8 @@ const Dropdown: FC<IProps> = ({ value, options, onChangeSize }) => {
 }
 
 const style = {
-  height: '100%'
+  height: '100%',
+  cursor: 'pointer'
 }
 
 export default Dropdown

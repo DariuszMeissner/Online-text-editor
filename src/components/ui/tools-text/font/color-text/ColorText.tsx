@@ -2,20 +2,12 @@
 import React, { FC, useState, useEffect } from 'react'
 import { ImTextColor } from 'react-icons/im'
 import formatText from '../../../../../function/format-text/formatText'
-import useOutClick from '../../../../../hooks/useOutClick'
+import { useOutClick } from '../../../../../hooks'
 import Button from '../../../button/Button'
 import MenuDropdown from '../../../menu-dropdown/MenuDropdown'
+import colors from './dataColors'
 
 const ColorText: FC = () => {
-  const options = [
-    { label: 'red', value: 'ff0000' },
-    { label: 'black', value: '000000' },
-    { label: 'yellow', value: 'ffff00' },
-    { label: 'green', value: '00ff40' },
-    { label: 'pink', value: 'ff0080' },
-    { label: 'orange', value: 'ff8000' }
-  ]
-
   const [value, setValue] = useState<string>('000000')
   const [active, setActive] = useState<boolean>(false)
 
@@ -57,7 +49,7 @@ const ColorText: FC = () => {
       {active && (
         <div className="position-relative" ref={ref}>
           <MenuDropdown
-            options={options}
+            options={colors}
             onChangeColor={handleChange}
             onChangeActive={handleClick}
           />
