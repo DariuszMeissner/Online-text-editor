@@ -8,20 +8,26 @@ interface IProps {
 }
 
 const SaveFile: FC<IProps> = ({ children }) => {
+  const serialize = (node: ChildNode) => {
+    return new XMLSerializer().serializeToString(node)
+  }
+
+  const createLink = (node: ChildNode) => {
+    const link = document.createElement('a')
+    link.setAttribute(
+      'href',
+      `data:text/plain;charset=utf-8,${serialize(node)}`
+    )
+    link.setAttribute('download', 'test')
+    link.click()
+  }
+
   const onClick = () => {
     const getDocument = document.querySelector('.workspace')
-    const linkToDownload = document.createElement('a')
 
-    const serializeDocument =
-      getDocument !== null && new XMLSerializer().serializeToString(getDocument)
-
-    linkToDownload.setAttribute(
-      'href',
-      `data:text/plain;charset=utf-8,${serializeDocument}`
-    )
-    linkToDownload.setAttribute('download', 'test')
-
-    linkToDownload.click()
+    if (getDocument) {
+      createLink(getDocument)
+    }
   }
 
   return (
