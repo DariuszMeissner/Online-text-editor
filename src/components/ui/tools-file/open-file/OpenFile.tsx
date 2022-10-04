@@ -1,22 +1,20 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable react/require-default-props */
 import React, { FC, useState, useContext, useEffect, useRef } from 'react'
 import { FaRegFolderOpen } from 'react-icons/fa'
 import { OpenDocumentContext } from '../../../../contexts/document'
 import Button from '../../button/Button'
 
+interface IProps {
+  children?: React.ReactNode
+}
 interface IReadedFile {
   status: string
 }
 
-const style = {
-  inputFileOpenHide: {
-    display: 'none'
-  }
-}
-
-const OpenFile: FC = () => {
+const OpenFile: FC<IProps> = ({ children }) => {
   const [readedFile, setReadedFile] = useState<IReadedFile>({ status: '' })
-  // eslint-disable-next-line
-  const { data, updateData } = useContext(OpenDocumentContext)
+  const { updateData } = useContext(OpenDocumentContext)
   const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
@@ -61,7 +59,7 @@ const OpenFile: FC = () => {
       <input
         // eslint-disable-next-line react/no-string-refs
         ref={inputRef}
-        style={style.inputFileOpenHide}
+        style={style.inputFile}
         type="file"
         multiple={false}
         accept=".txt"
@@ -69,12 +67,19 @@ const OpenFile: FC = () => {
       />
       <Button
         title="Open file from txt"
-        classValue="btn btn-light"
+        classValue="btn btn-lg btn-light"
         icon={FaRegFolderOpen}
-        onClick={handleClick}
-      />
+        onClick={handleClick}>
+        {children}
+      </Button>
     </>
   )
+}
+
+const style = {
+  inputFile: {
+    display: 'none'
+  }
 }
 
 export default OpenFile

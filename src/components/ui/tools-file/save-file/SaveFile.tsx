@@ -1,8 +1,13 @@
+/* eslint-disable react/require-default-props */
 import React, { FC } from 'react'
 import { GiSave } from 'react-icons/gi'
 import Button from '../../button/Button'
 
-const SaveFile: FC = () => {
+interface IProps {
+  children?: React.ReactNode
+}
+
+const SaveFile: FC<IProps> = ({ children }) => {
   const onClick = () => {
     const getDocument = document.querySelector('.workspace')
     const linkToDownload = document.createElement('a')
@@ -16,22 +21,17 @@ const SaveFile: FC = () => {
     )
     linkToDownload.setAttribute('download', 'test')
 
-    if (document.createEvent) {
-      const event = document.createEvent('MouseEvents')
-      event.initEvent('click', true, true)
-      linkToDownload.dispatchEvent(event)
-    } else {
-      linkToDownload.click()
-    }
+    linkToDownload.click()
   }
 
   return (
     <Button
       onClick={onClick}
-      classValue="btn btn-light"
+      classValue="btn btn-light btn-lg"
       title="Save file to txt"
-      icon={GiSave}
-    />
+      icon={GiSave}>
+      {children}
+    </Button>
   )
 }
 

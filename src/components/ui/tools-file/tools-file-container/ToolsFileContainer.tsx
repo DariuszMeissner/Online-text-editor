@@ -1,16 +1,6 @@
 import React, { FC } from 'react'
-import OpenFile from '../open-file/OpenFile'
-import PrintToPdf from '../print-to-pdf/PrintToPdf'
-import SaveFile from '../save-file/SaveFile'
+import Menu from '../../../menu/Menu'
 
-const ToolsFileContainer: FC = () => {
-  return (
-    <>
-      <SaveFile />
-      <PrintToPdf />
-      <OpenFile />
-    </>
-  )
-}
+const ToolsFileContainer: FC = () => <Menu />
 
 export default ToolsFileContainer
