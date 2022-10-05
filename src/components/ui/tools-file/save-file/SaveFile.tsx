@@ -7,12 +7,12 @@ interface IProps {
   children?: React.ReactNode
 }
 
-const SaveFile: FC<IProps> = ({ children }) => {
+const SaveFile: FC<IProps> = ({ children }): JSX.Element => {
   const serialize = (node: ChildNode) => {
     return new XMLSerializer().serializeToString(node)
   }
 
-  const createLink = (node: ChildNode) => {
+  const createLink = (node: ChildNode): void => {
     const link = document.createElement('a')
     link.setAttribute(
       'href',
@@ -22,7 +22,7 @@ const SaveFile: FC<IProps> = ({ children }) => {
     link.click()
   }
 
-  const onClick = () => {
+  const onClick = (): void => {
     const getDocument = document.querySelector('.workspace')
 
     if (getDocument) {
