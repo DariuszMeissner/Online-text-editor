@@ -1,6 +1,8 @@
+<img src="https://user-images.githubusercontent.com/59477908/220053595-fb1dd77b-fa1c-4329-95df-25a27492fd55.png" height="400">
+
 ### Online-text-editor
 
-I'm building my own online text editor based on React and Typescript.
+Online text editor based on React and Typescript.
 
 #### To see demo please click in link below
 
@@ -9,7 +11,6 @@ https://dariuszmeissner.github.io/Online-text-editor/
 #### Ready functions:
 
 text:
-
 - bold,
 - underline,
 - italic,
@@ -21,7 +22,6 @@ text:
 - color
 
 file:
-
 - save document to pdf
 - save document to .txt format
 - open document from .txt format
